@@ -19,7 +19,7 @@ const ItemList = ({ items = [] }) => {
         id: index,
         descricao: item.descricao,
         quantidadeVendida: item.quantidadeVendida.toFixed(2),
-        precoMedio: item.totalVendido / item.quantidadeVendida.toFixed(2),
+        precoMedio: (item.totalVendido / item.quantidadeVendida.toFixed(2)).toFixed(2),
         totalVendido: item.totalVendido
     }));
 
