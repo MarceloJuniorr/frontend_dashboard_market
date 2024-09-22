@@ -33,7 +33,7 @@ const SalesList = ({ sales = [], onShowDetails }) => {
     const rows = sales.map((sale, index) => ({
         id: index,
         codigo: sale.codigo,
-        dataEmissao: new Date(sale.dataEmissao).toLocaleDateString(),
+        dataEmissao: new Date(sale.dataEmissao),
         nome: sale.nome,
         totalVenda: sale.totalVenda.toFixed(2)
     }));
