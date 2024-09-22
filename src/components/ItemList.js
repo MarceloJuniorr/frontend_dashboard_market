@@ -10,9 +10,9 @@ const ItemList = ({ items = [] }) => {
 
     const columns = [
         { field: 'descricao', headerName: 'Descrição', width: isMobile ? 150 : 300 },
-        { field: 'quantidadeVendida', headerName: 'Quantidade Vendida', width: isMobile ? 100 : 200 },
-        { field: 'precoMedio', headerName: 'Preço Médio (R$)', width: isMobile ? 100 : 180, hide: isMobile },
-        { field: 'totalVendido', headerName: 'Total Vendido (R$)', width: isMobile ? 100 : 180 }
+        { field: 'quantidadeVendida', headerName: 'Quantidade Vendida', type: 'number', width: isMobile ? 100 : 200 },
+        { field: 'precoMedio', headerName: 'Preço Médio (R$)', type: 'number', width: isMobile ? 100 : 180, hide: isMobile },
+        { field: 'totalVendido', headerName: 'Total Vendido (R$)', type: 'number', width: isMobile ? 100 : 180 }
     ];
 
     const rows = items.map((item, index) => ({

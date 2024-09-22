@@ -11,9 +11,9 @@ const SalesList = ({ sales = [], onShowDetails }) => {
 
     const columns = [
         { field: 'codigo', headerName: 'Código', width: isMobile ? 100 : 120 },
-        { field: 'dataEmissao', headerName: 'Data Emissão', width: isMobile ? 120 : 150 },
+        { field: 'dataEmissao', headerName: 'Data Emissão', type: 'date', width: isMobile ? 120 : 150 },
         { field: 'nome', headerName: 'Cliente', width: isMobile ? 200 : 200 },
-        { field: 'totalVenda', headerName: 'Total Venda (R$)', width: isMobile ? 120 : 180 },
+        { field: 'totalVenda', headerName: 'Total Venda (R$)', type: 'number', width: isMobile ? 120 : 180 },
         {
             field: 'detalhes',
             headerName: 'Detalhes',
