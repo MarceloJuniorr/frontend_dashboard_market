@@ -4,7 +4,7 @@ import DataInput from './components/DataInput';
 import StatBox from './components/StatBox';
 import ItemList from './components/ItemList';
 import SalesList from './components/SalesList';
-import CustomerList from './components/customerList';
+import ClientesList from './components/ClientesList';
 
 const Dashboard = () => {
   const [startDate, setStartDate] = useState(new Date().toISOString().slice(0, 10));
@@ -90,7 +90,7 @@ const Dashboard = () => {
         {dashboardData && <ItemList items={dashboardData.itensMaisVendidos} />}
 
         {/* Lista de Resumo de clientes */}
-        {dashboardData && <CustomerList customers={dashboardData.clientes} />}
+        {dashboardData && <ClientesList clientes={dashboardData.clientes} />}
 
         {/* Lista de Vendas */}
         {dashboardData && <SalesList sales={dashboardData.vendas} onShowDetails={handleShowDetails} />}
