@@ -4,6 +4,7 @@ import DataInput from './components/DataInput';
 import StatBox from './components/StatBox';
 import ItemList from './components/ItemList';
 import SalesList from './components/SalesList';
+import CustomerList from './components/customerList';
 
 const Dashboard = () => {
   const [startDate, setStartDate] = useState(new Date().toISOString().slice(0, 10));
@@ -29,6 +30,7 @@ const Dashboard = () => {
           valorTotal: "0.00",
           ticketMedio: "0.00",
           itensMaisVendidos: [],
+          clientes: [],
           vendas: []
         });
       }
@@ -86,6 +88,9 @@ const Dashboard = () => {
 
         {/* Lista de Itens Mais Vendidos */}
         {dashboardData && <ItemList items={dashboardData.itensMaisVendidos} />}
+
+        {/* Lista de Resumo de clientes */}
+        {dashboardData && <CustomerList customers={dashboardData.clientes} />}
 
         {/* Lista de Vendas */}
         {dashboardData && <SalesList sales={dashboardData.vendas} onShowDetails={handleShowDetails} />}
