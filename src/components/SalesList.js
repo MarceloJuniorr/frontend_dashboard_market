@@ -14,6 +14,8 @@ const SalesList = ({ sales = [], onShowDetails }) => {
         { field: 'dataEmissao', headerName: 'Data Emissão', type: 'date', width: isMobile ? 120 : 150 },
         { field: 'nome', headerName: 'Cliente', width: isMobile ? 200 : 200 },
         { field: 'totalVenda', headerName: 'Total Venda (R$)', type: 'number', width: isMobile ? 120 : 180 },
+        { field: 'totalCrediario', headerName: 'Total Crediario (R$)', type: 'number', width: isMobile ? 120 : 180 },
+
         {
             field: 'detalhes',
             headerName: 'Detalhes',
@@ -35,6 +37,7 @@ const SalesList = ({ sales = [], onShowDetails }) => {
         codigo: sale.codigo,
         dataEmissao: new Date(sale.dataEmissao),
         nome: sale.nome,
+        totalCrediario: sale.totalCrediario?sale.totalCrediario.toFixed(2):0,
         totalVenda: sale.totalVenda.toFixed(2)
     }));
 

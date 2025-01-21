@@ -11,14 +11,17 @@ const ClientesList = ({ clientes = [] }) => {
     const columns = [
         { field: 'nome', headerName: 'Cliente', width: isMobile ? 150 : 300 },
         { field: 'quantidadeCompras', headerName: 'Quantidade Compras', type: 'number', width: isMobile ? 100 : 200 },
-        { field: 'valorTotal', headerName: 'Total Comprado (R$)', type: 'number', width: isMobile ? 100 : 180 }
+        { field: 'valorTotal', headerName: 'Total Comprado (R$)', type: 'number', width: isMobile ? 100 : 180 },
+        { field: 'valorCrediario', headerName: 'Total Crediario (R$)', type: 'number', width: isMobile ? 100 : 180 }
     ];
 
     const rows = clientes.map((cliente, index) => ({
         id: index,
         nome: cliente.nome,
-        quantidadeCompras: cliente.quantidadeCompras.toFixed(2),
-        valorTotal: cliente.valorTotal
+        quantidadeCompras: cliente.quantidadeCompras,
+        valorTotal: cliente.valorTotal,
+        valorCrediario: cliente.valorCrediario
+
     }));
 
     return (

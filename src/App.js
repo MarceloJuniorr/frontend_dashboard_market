@@ -28,6 +28,7 @@ const Dashboard = () => {
         setDashboardData({
           quantidadeVendas: 0,
           valorTotal: "0.00",
+          valorTotalCrediario: "0.00",
           ticketMedio: "0.00",
           itensMaisVendidos: [],
           clientes: [],
@@ -74,13 +75,16 @@ const Dashboard = () => {
         {/* Blocos de Informações */}
         {dashboardData && (
           <Grid container spacing={2} my={4}>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={6}>
               <StatBox title="Quantidade de Vendas" value={dashboardData.quantidadeVendas} />
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={6}>
               <StatBox title="Valor Total" value={`R$ ${dashboardData.valorTotal}`} />
             </Grid>
-            <Grid item xs={12} sm={4}>
+            <Grid item xs={12} sm={6}>
+              <StatBox title="Total Crediário" value={`R$ ${dashboardData.valorTotalCrediario}`} />
+            </Grid>
+            <Grid item xs={12} sm={6}>
               <StatBox title="Ticket Médio" value={`R$ ${dashboardData.ticketMedio}`} />
             </Grid>
           </Grid>
